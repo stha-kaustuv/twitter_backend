@@ -9,7 +9,7 @@ export const Register = async (req,res) =>{
         if(!name || !username || !email || !password){
             return res.status(401).json({
                 message:"All fields must be filled.",
-                success:false
+                success:false   
             })
         }
         const user = await User.findOne({email});
